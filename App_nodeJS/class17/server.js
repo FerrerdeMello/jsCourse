@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-mongoose.connect( process.env.CONNECTIONSTRING )
+mongoose.connect( process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     app.emit('pronto');
   })
@@ -18,6 +18,7 @@ const { middlewareGlobal, checkCsrfError, csrfMiddleware } = require('./src/midd
 
 app.use(helmet());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')));
 
 const sessionOptions = session({

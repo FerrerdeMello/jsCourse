@@ -64,4 +64,11 @@ contact.getContacts = async function() {
   return contacsSearched;
 };
 
+contact.delete = async function(id) {
+  if(typeof id !== 'string') return;
+  if (!mongoose.Types.ObjectId.isValid(id)) return null; // invalid id
+  const contacDeleted = await contactModel.findOneAndDelete({ _id: id });
+  return contacDeleted;
+};
+
 module.exports =  contact;

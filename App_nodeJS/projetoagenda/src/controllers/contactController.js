@@ -49,3 +49,12 @@ exports.edit = async function(req, res) {
     res.render('404');
   }
 };
+
+exports.delete = async function(req, res) {
+  if(!req.params.id) return res.render('404');
+  const contactById = await contactModel.delete(req.params.id);
+  if(!contactById) return res.render('404');
+  req.flash('success', 'The contact was successfully deleted.');
+  req.session.save(() => res.redirect(`/`));
+  return;
+};

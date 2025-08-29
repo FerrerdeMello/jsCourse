@@ -15,7 +15,7 @@
         <div class="row my-5">
           <div class="col-lg">
             <h4>Don't have an account? Register</h4>
-            <form action="/login/register" method="POST">
+            <form class="form-register" action="/login/register" method="POST">
               <input type="hidden" name="_csrf" value=<%= csrfToken %>>
               <div class="mb-3">
                 <label class="form-label">Enter your email address</label>
@@ -30,7 +30,7 @@
           </div>
           <div class="col-lg">
             <h4>Log in to your account</h4>
-            <form action="/login/signIn" method="POST">
+            <form class="form-signIn" action="/login/signIn" method="POST">
               <input type="hidden" name="_csrf" value=<%= csrfToken %>>
               <div class="mb-3">
                 <label class="form-label">Enter your email address</label>

@@ -82,3 +82,8 @@
   margin: 1rem;
   color: rgb(23, 22, 22);
 }
+
+.tarefas li span {
+  display: flex;
+  align-items: center;
+}

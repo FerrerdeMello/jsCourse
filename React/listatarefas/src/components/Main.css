@@ -12,78 +12,8 @@
   text-align: center;
 }
 
-.form{
-  margin-top: 1.875rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.form input[type="text"] {
-  height: 2.5rem;
-  padding: 0 1.25rem;
-  font-size: 1.25rem;
-  border: 0.0625rem solid #ccc;
-  min-width: 80%;
-}
-
-.form button {
-  border: none;
-  height: 2.5rem;
-  width: 2.5rem;
-  background: #f04c64;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s ease, transform 0.2s ease; /* animação suave */
-}
-.form button:hover {
-  background: #d63a50; /* tom mais escuro no hover */
-  transform: scale(1.05); /* leve aumento no hover */
-}
-
-.tasks{
-  margin-top: 1.875rem;
-}
-
-.tasks li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.625rem;
-  transition: all 600ms;
-}
-
-.tasks li:hover {
-  background: #51c5de;
-}
-
-.tasks li .edit {
-  margin-right: 0.9375rem;
-  color: #51c5de;
-}
-
-.tasks li .delete {
-  margin-right: 0.9375rem;
-  color: #f04c64;
-}
-
-.tasks li .edit, .delete {
-  cursor: pointer;
-  transition: all 600ms;
-}
-
-.tasks li:hover .edit, .delete {
-  color: #000;
-}
-
 .digited {
   margin: 1rem;
+  margin-top: 5rem;
   color: rgb(23, 22, 22);
-}
-
-.tarefas li span {
-  display: flex;
-  align-items: center;
 }

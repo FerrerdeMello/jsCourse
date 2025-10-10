@@ -9,7 +9,7 @@ export default function Login() {
         <small> ::: </small>
       </Title>
       <Paragrafo>Esta será a minha tela de login...</Paragrafo>
-      <a href="">Next</a>
+      <button type="button">Send</button>
     </Container>
   );
 }

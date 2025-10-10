@@ -1,16 +1,18 @@
-import { createGlobalStyle , styled } from 'styled-components';
+import { createGlobalStyle, styled } from 'styled-components';
+import { primaryColor, primaryDarkColor } from '../config/colors';
 
 const GlobalStyles = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
     outline: none;
-    box-sizing: border-box;
+    box-sizing: border-box
   }
 
   body {
     font-family: sans-serif;
-    background: #eee;
+    background: ${primaryDarkColor};
+    color: ${primaryColor};
   }
 
   html, body, #root {
@@ -19,10 +21,17 @@ const GlobalStyles = createGlobalStyle`
 
   button {
     cursor: pointer;
+    background: ${primaryColor};
+    border: none;
+    color: #fff;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.25rem;
+    font-weight: 777;
   }
 
   a {
     text-decoration: none;
+    color: ${primaryColor};
   }
 
   ul {

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Title = styled.h1`
   color: ${(props) => (props.$isRed ? 'red' : 'blue')};
+  text-align: center;
 
   small {
     font-size: 1rem;
@@ -11,5 +12,6 @@ export const Title = styled.h1`
 `;
 
 export const Paragrafo = styled.p`
+  text-align: center;
   font-size: 1rem;
 `;

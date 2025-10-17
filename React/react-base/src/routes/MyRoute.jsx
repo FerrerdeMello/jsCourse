@@ -1,25 +1,21 @@
-import PropTypes from "prop-types";
-import { Redirect, Route } from "react-router-dom";
+import PropTypes from 'prop-types';
+import { Navigate } from 'react-router-dom';
 
-export default function MyRoute( component: Component, isClosed, ... rest ) {
+export default function MyRoute({ element: Element, isClosed }) {
   const isLoggedId = false;
 
   if (isClosed && !isLoggedId) {
-    return (
-      <Redirect
-        to={{ pathname: '/login', state: {prevPath: rest.location.pathname} }}
-      />
-    );
+    return <Navigate to="/login" replace />;
   }
 
-  return <Route { ... rest} component={Component} />;
+  return Element;
 }
 
-MyRoute.dafaultProps = {
+MyRoute.defaultProps = {
   isClosed: false,
-}
+};
 
-MyRoute.prototype = {
-  component: PropTypes.oneOfType([PropTypes.element, PropTypes.func]).isRequired,
+MyRoute.propTypes = {
+  element: PropTypes.element.isRequired,
   isClosed: PropTypes.bool,
-}
+};

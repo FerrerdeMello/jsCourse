@@ -1,4 +1,5 @@
 import { BrowserRouter } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
 import Button from './components/Button/Button';
 import Header from './components/Header';
@@ -14,6 +15,7 @@ function App() {
       <CenteredDiv>
         <Button> Component Login by me</Button>
       </CenteredDiv>
+      <ToastContainer autoClose={3000} className={'toast-container'} />
     </BrowserRouter>
   );
 }

@@ -37,7 +37,7 @@ import './Button.css';
  *   Clique Aqui
  * </Button>
  */
-const Button = ({
+const ButtonStylized = ({
   children,
   variant = 'primary',
   size = 'medium',
@@ -120,7 +120,7 @@ const Button = ({
  * IMPORTANTE: PropTypes são removidos em produção (com babel-plugin-transform-react-remove-prop-types)
  * Servem apenas para desenvolvimento e documentação.
  */
-Button.propTypes = {
+ButtonStylized.propTypes = {
   children: PropTypes.node.isRequired,
   variant: PropTypes.oneOf(['primary', 'secondary', 'danger']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
@@ -136,7 +136,7 @@ Button.propTypes = {
  * Default Props (alternativa: usar default parameters)
  * Documentação: https://react.dev/reference/react/Component#static-defaultprops
  */
-Button.defaultProps = {
+ButtonStylized.defaultProps = {
   variant: 'primary',
   size: 'medium',
   disabled: false,
@@ -145,4 +145,4 @@ Button.defaultProps = {
   className: '',
 };
 
-export default Button;
+export default ButtonStylized;

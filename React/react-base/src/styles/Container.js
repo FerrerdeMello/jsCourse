@@ -1,7 +1,7 @@
-import { styled } from 'styled-components';
+import styled from 'styled-components';
 
 export const Container = styled.section`
-  max-width: 22.5rem;
+  max-width: 24.5rem;
   background: #fff;
   margin: 1.875rem auto;
   padding: 1.875rem;

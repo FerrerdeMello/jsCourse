@@ -1,9 +1,9 @@
 import { Container } from '../../styles/Container';
 
-export default function Login() {
+export default function Plant() {
   return (
     <Container>
-      <h1> Login </h1>
+      <h1> Plant </h1>
     </Container>
   );
 }

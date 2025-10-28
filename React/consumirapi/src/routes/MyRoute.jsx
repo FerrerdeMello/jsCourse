@@ -1,21 +1,22 @@
 import PropTypes from 'prop-types';
-import { Navigate } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 
-export default function MyRoute({ element: Element, isClosed }) {
-  const isLoggedId = false;
-
-  if (isClosed && !isLoggedId) {
+export default function MyRoute({ isClosed, isLoggedIn }) {
+  if (isClosed && !isLoggedIn) {
     return <Navigate to="/login" replace />;
   }
 
-  return Element;
+  return <Outlet />;
 }
 
+// Props default
 MyRoute.defaultProps = {
   isClosed: false,
+  isLoggedIn: false,
 };
 
+// Validação de props
 MyRoute.propTypes = {
-  element: PropTypes.element.isRequired,
   isClosed: PropTypes.bool,
+  isLoggedIn: PropTypes.bool,
 };

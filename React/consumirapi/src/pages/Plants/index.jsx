@@ -62,8 +62,11 @@ export default function Plants() {
             {plants.map((plant) => (
               <div key={plant.id}>
                 <PlantPhoto>
-                  {plant?.Fotos?.[0]?.url ? (
-                    <img src={plant.Fotos[0].url} alt="" />
+                  {plant?.Fotos?.[0]?.filename ? (
+                    <img
+                      src={`${API_BASE_URL}/images/${plant.Fotos[0].filename}`}
+                      alt=""
+                    />
                   ) : (
                     <FaUserCircle size={35} />
                   )}

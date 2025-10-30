@@ -27,7 +27,12 @@ const GlobalStyles = createGlobalStyle`
     color: #fff;
     padding: 0.625rem 1.25rem;
     border-radius: 0.25rem;
-    font-weight: 777;
+    font-weight: 700;
+    transition: all 300ms;
+  }
+
+  button:hover {
+    filter: brightness(75%);
   }
 
   a {

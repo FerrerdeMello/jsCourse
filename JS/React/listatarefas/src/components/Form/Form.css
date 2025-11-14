@@ -1,0 +1,31 @@
+
+.form{
+  margin-top: 1.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form input[type="text"] {
+  height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 1.25rem;
+  border: 0.0625rem solid #ccc;
+  min-width: 80%;
+}
+
+.form button {
+  border: none;
+  height: 2.5rem;
+  width: 2.5rem;
+  background: #f04c64;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s ease; /* animação suave */
+}
+.form button:hover {
+  background: #d63a50; /* tom mais escuro no hover */
+  transform: scale(1.05); /* leve aumento no hover */
+}

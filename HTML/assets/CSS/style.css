@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+margin: 5px;
+}
+h1 {
+background: blueviolet;
+}
+.background-title {
+background: red;
+}
+.heading {
+  transition: all 300ms ease-in-out; 
+}.heading:hover {
+  text-decoration: underline;
+  background-color: darkslateblue;
+}
+#heading-I{
+font-size: 72px;
+font-style: bold;
+}
+label {
+cursor: pointer;
+display: block;
+}
+input:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  outline: none;
+  border: 1px solid black;
+}
+input:checked {
+  background-color: green;
+}

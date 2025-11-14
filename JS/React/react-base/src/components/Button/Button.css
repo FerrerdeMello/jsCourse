@@ -1,0 +1,172 @@
+/**
+ * Button Component Styles
+ *
+ * PADRÃO DE NOMENCLATURA: BEM (Block Element Modifier)
+ * Documentação: http://getbem.com/
+ *
+ * Estrutura:
+ * - .button (Block)
+ * - .button__spinner (Element)
+ * - .button--primary (Modifier)
+ *
+ * DESIGN PATTERN: Atomic CSS Principles
+ * Estilos reutilizáveis e componibilidade através de modificadores
+ */
+
+/* ========================================
+   BASE BUTTON (Block)
+   ======================================== */
+
+.button {
+  /* Layout & Box Model */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+
+  /* Typography */
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+
+  /* Visual */
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  cursor: pointer;
+
+  /* Transitions para melhor UX */
+  /* Referência: Material Design Motion Guidelines */
+  transition:
+    background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out,
+    transform 0.1s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+
+  /* Acessibilidade: Previne seleção de texto */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* ========================================
+   FOCUS STATES (Acessibilidade)
+   Referência: WCAG 2.1 Guidelines
+   ======================================== */
+
+/* Remove outline padrão mas adiciona estilo personalizado */
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+/* Remove shadow em dispositivos que não usam teclado */
+.button:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+
+/* Mantém outline para navegação por teclado */
+.button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* ========================================
+   SIZE MODIFIERS
+   ======================================== */
+
+.button--small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.button--medium {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.button--large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* ========================================
+   VARIANT: PRIMARY
+   ======================================== */
+
+.button--primary {
+  background-color: #3182ce;
+  color: #ffffff;
+  border-color: #3182ce;
+}
+
+.button--primary:hover:not(:disabled):not(.button--loading) {
+  background-color: #2c5282;
+  border-color: #2c5282;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button--primary:active:not(:disabled):not(.button--loading) {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   VARIANT: SECONDARY
+   ======================================== */
+
+.button--secondary {
+  background-color: #ffffff;
+  color: #3182ce;
+  border-color: #3182ce;
+}
+
+.button--secondary:hover:not(:disabled):not(.button--loading) {
+  background-color: #ebf8ff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button--secondary:active:not(:disabled):not(.button--loading) {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   VARIANT: DANGER
+   ======================================== */
+
+.button--danger {
+  background-color: #e53e3e;
+  color: #ffffff;
+  border-color: #e53e3e;
+}
+
+.button--danger:hover:not(:disabled):not(.button--loading) {
+  background-color: #c53030;
+  border-color: #c53030;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button--danger:active:not(:disabled):not(.button--loading) {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   STATE: DISABLED
+   ======================================== */
+
+.button--disabled,
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

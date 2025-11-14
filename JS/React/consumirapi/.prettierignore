@@ -1,0 +1,26 @@
+# Dependências - não devem ser formatadas
+node_modules
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build outputs - arquivos gerados automaticamente
+dist
+build
+.next
+out
+coverage
+
+# Cache e arquivos temporários
+.cache
+.vscode
+.idea
+*.log
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos específicos que não devem ser formatados
+*.min.js
+*.min.css

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta charset="viewport">
+    <title>My First HTML App</title>
+
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      body {
+        margin: 5px;
+      }
+      h1 {
+        background: blueviolet;
+      }
+      .background-title {
+        background: red;
+      }
+      #heading-I{
+        font-size: 72px;
+        font-style: bold;
+      }
+      table {
+        border-collapse: collapse;
+        width: 150%;
+      }
+      table td, table th {
+        border: 1px solid #ccc;
+        padding: 5px;
+        text-align: left;
+      }
+      table caption {
+        caption-side: top;
+        text-align: left;
+        font-style: italic;
+        font-size: 14px;
+        margin: 5px 0;
+      }
+      table tfoot {
+        background-color: #ddd;
+      }
+      .responsive-table {
+        max-width: 100%;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <h1 id="heading-I">
+      My First HTML App!!!
+    </h1>
+    <h1 id="heading-II" class="background-title">
+      H1 = HTML Review
+    </h1>
+    <h3 class="background-title">
+      H3 = HTML Review
+    </h3>
+    <h6 class="background-title">
+      H6 = HTML Review
+    </h6>
+    <header>
+      <p>
+        <b>Lorem ipsum dolor sit amet</b>, consectetur <s>adipiscing</s> elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget <sup>nulla.<br> 
+        <b>Lorem ipsum dolor sit amet</b>, consectetur <s>adipiscing</s> elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget <sup>nulla</sup>.
+      </p>
+    </header>
+    <blockquote>
+      This is a quote...
+    </blockquote>
+    <hr>
+    <code>
+      The CODE tag allows you to display a part of the code on the screen.
+    </code>
+    <aside>
+        <nav>
+          <ul>
+            <li>
+              <a href="https://developer.mozilla.org/pt-BR/" target='_blank'>mdn</a>              
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/pt-BR/" target='_blank'>mdn II</a>              
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/pt-BR/" target='_blank'>mdn III</a>              
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div style="width: 120px; height:120px; background: red;"> 
+        <div style="width: 60px; height:60px; background: yellow; float: left;"> 
+        </div>
+        <div style="width: 60px; height:60px; background: blue; float: left;"> 
+        </div>
+        <div style="width: 60px; height:60px; background: brown; float: left;"> 
+        </div>
+      </div>
+      <br><hr><br>
+      <div class="responsive-table">
+        <table>
+          <caption>Table Example</caption>
+          <thead>
+            <tr>
+              <td colspan="3" style="text-align: center">First Table</td>
+            </tr>
+            <tr>
+              <td>Title 1</td>
+              <td>Title 2</td>
+              <td>Title 3</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Body 1</td>
+              <td>Body 2</td>
+              <td>Body 3</td>
+            </tr>
+            <tr>
+              <td colspan="2" rowspan="2">Body 1</td>
+              <td>Body 3</td>
+            </tr>
+            <tr>
+              <td>Body 3</td>
+            </tr>
+            <tr>
+              <td>Body 1</td>
+              <td>Body 2</td>
+              <td>Body 3</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>Foot 1</td>
+              <td>Foot 2</td>
+              <td>Foot 3</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <br>
+      <h2>Life is go on...</h2>
+      <br>
+  </body>
+
+</html>

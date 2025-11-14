@@ -1,0 +1,12 @@
+TAGs:
+<% Controle de fluxo (if, for,... ) %>
+<%= Imprime escapando caracteres %>
+<%- Imprime sem escapar caracteres %>
+<%# Comentário %>
+<%- include('path/file'); %>
+~
+<% if (condition) { %>
+  <%= show everything %>
+<% } else { %>
+  <%= show otherthing %>
+<% } %>

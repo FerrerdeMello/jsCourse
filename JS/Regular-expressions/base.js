@@ -10,8 +10,10 @@ const files = [
   'shopping list.txt'
 ];
 
+const html = `<p>Olá mundo!</p> <p>Olá de novo!</p> <div>Conteúdo da div</div> <span>Conteúdo do span</span>`;
 
 module.exports = {
   text,
   files,
+  html,
 }

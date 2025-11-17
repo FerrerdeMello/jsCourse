@@ -9,6 +9,13 @@ Os CPFs válidos são:
 555.666.777-88
 `;
 
+const cpfs2 = `
+254.224.877-45
+215.978.456-12
+047.258.369-96
+963.987.32a-00
+`;
+
 const ips = `
   Lista de IPs:
   0.0.0.0
@@ -35,6 +42,7 @@ const text = `The Beatles foi uma banda de rock britânica formada na cidade de 
 module.exports = {
   alphabet,
   cpfs,
+  cpfs2,
   ips,
   files,
   html,

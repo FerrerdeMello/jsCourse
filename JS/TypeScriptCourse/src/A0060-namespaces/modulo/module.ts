@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-namespace */
-namespace MeuNamespace {
+export namespace MeuNamespace {
   export const nomeDoNamespace = 'Luiz';
 
   export class PessoaDoNamespace {
